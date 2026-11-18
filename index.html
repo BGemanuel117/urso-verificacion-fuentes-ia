@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Curso en línea Verificación de Fuentes con IA para Universitarios (Modelo ASSURE y Modelo CRIA).">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cpath%20d%3D%22M32%204%20L56%2012%20V30%20C56%2045%2046%2055%2032%2060%20C18%2055%208%2045%208%2030%20V12%20Z%22%20fill%3D%22%231e6b4f%22/%3E%3Ccircle%20cx%3D%2229%22%20cy%3D%2228%22%20r%3D%2210%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%224.5%22/%3E%3Cpath%20d%3D%22M36.5%2035.5%20L45%2044%22%20stroke%3D%22%23fff%22%20stroke-width%3D%225.5%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M24.5%2028%20l3.4%203.4%20l6.4%20-7%22%20fill%3D%22none%22%20stroke%3D%22%23f2b84b%22%20stroke-width%3D%223.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E">
-<title>Verificación de Fuentes con IA · v25</title>
+<title>Verificación de Fuentes con IA · v26</title>
 <style>
 :root{
   --bg:#f6f8f7; --surface:#ffffff; --text:#1f2a24; --muted:#5f6d66; --line:#dfe6e2;
@@ -919,6 +919,93 @@ html.a11y-contrast .qbig{background:#000!important;color:#ff0!important;border:1
 html.a11y-dark .clsrow.no{background:#3a1d1a;color:#ffd9d4}
 html.a11y-dark .clsrow.ok{background:#1c3329}
 html.a11y-contrast .clsrow{background:#000!important;color:#fff!important;border-color:#fff!important}
+/* v26 · grupo de demostración */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.btn.sm{padding:6px 12px;font-size:13px;white-space:nowrap}
+.demo-note{background:var(--brand-soft);border-left:4px solid var(--brand);border-radius:8px;padding:10px 12px;font-size:14px;margin:0 0 12px}
+.grp-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:12px}
+.grp-kpi div{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column}
+.grp-kpi b{font-size:22px;color:var(--brand)}
+.grp-kpi span{font-size:13px;color:var(--muted)}
+.grp-t td,.grp-t th{vertical-align:middle}
+.grp-t tr.sel td{background:var(--brand-soft)}
+.stuhead{margin:22px 0 8px;scroll-margin-top:80px}
+.stupick{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
+.stupick label{font-weight:600}
+.stupick select{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);max-width:100%}
+html.a11y-contrast .demo-note,html.a11y-contrast .grp-kpi div,html.a11y-contrast .grp-t tr.sel td{background:#000;color:#fff;border-color:#ffff00}
+html.a11y-contrast .grp-kpi b,html.a11y-contrast .grp-kpi span{color:#ffff00}
+html.a11y-contrast .stupick select{background:#000;color:#fff;border-color:#fff}
+.grp-t td:nth-child(n+3):nth-child(-n+5),.grp-t td:nth-child(8),.grp-t th:nth-child(n+3):nth-child(-n+5){white-space:nowrap;text-align:center}
+.grp-t td:first-child{min-width:190px}
+.grp-t td:nth-child(6){min-width:110px}
+.grp-av{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.grp-av .bar{width:54px;flex:none}
+.grp-t th,.grp-t td{padding-left:8px;padding-right:8px}
+.grp-t td:first-child{min-width:170px}
+.grp-t td:nth-child(7){max-width:150px}
+.grp-t td:nth-child(7) .badge{white-space:normal}
+.grp-t td:nth-child(n+3):nth-child(-n+5),.grp-t th:nth-child(n+3):nth-child(-n+5){padding-left:4px;padding-right:4px}
+.ptabs{display:flex;gap:6px;flex-wrap:wrap;border-bottom:2px solid var(--line);margin:4px 0 16px}
+.ptabs button{font:inherit;font-weight:600;font-size:14px;background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:10px 14px;color:var(--muted);cursor:pointer;border-radius:8px 8px 0 0;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ptabs button:hover{background:var(--brand-soft);color:var(--text)}
+.ptabs button[aria-selected="true"]{color:var(--brand);border-bottom-color:var(--brand)}
+.pcount{display:inline-block;min-width:20px;padding:1px 7px;border-radius:999px;background:#b3261e;color:#fff;font-size:12px;text-align:center;margin-left:4px}
+.pendrow .avatar{width:34px;height:34px;font-size:14px}
+.stucard .stutop{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.stunav{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.stunav select{font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);max-width:230px}
+.stuid{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.avatar.big{width:52px;height:52px;font-size:22px}
+.stubar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px}
+.stubar .bar{max-width:260px;min-width:120px}
+.stubar .muted{font-size:13px}
+.psub{margin:20px 0 10px}
+.plist{list-style:none;margin:0;padding:0}
+.plink{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;font:inherit;font-size:14px;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:8px 2px;color:var(--text);cursor:pointer}
+.plink:hover{background:var(--brand-soft)}
+.plink:focus-visible,.ptabs button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+html.a11y-contrast .ptabs button[aria-selected="true"]{color:#ffff00;border-bottom-color:#ffff00}
+html.a11y-contrast .ptabs button,html.a11y-contrast .plink{color:#fff}
+html.a11y-contrast .ptabs button:hover,html.a11y-contrast .plink:hover{background:#222}
+html.a11y-contrast .pcount{background:#ffff00;color:#000}
+html.a11y-contrast .stunav select{background:#000;color:#fff;border-color:#fff}
+.grp-t td:nth-child(7){max-width:none;min-width:150px}
+.grp-t td:nth-child(7) .badge{white-space:nowrap}
+@media (max-width:600px){
+  .ptabs{flex-wrap:nowrap;overflow-x:auto;gap:2px}
+  .ptabs button{flex:none;max-width:220px;padding:10px 10px}
+  .stucard .stutop{flex-direction:column;align-items:stretch}
+  .stunav{flex-wrap:nowrap}
+  .stunav select{flex:1;min-width:0;max-width:none}
+  .nvt{display:none}
+  .stuid .badge{order:3}
+}
+.stubar2{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.crumbs2{display:flex;align-items:center;gap:8px;font-size:15px;min-width:0}
+.crumbs2 b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.linkb{font:inherit;background:none;border:0;padding:4px 2px;color:var(--brand);font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.stucount{font-size:13px;color:var(--muted);white-space:nowrap}
+.badge.demo{font-size:11px;vertical-align:middle;margin-left:6px;font-weight:600}
+.stufacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:16px 0 0}
+.stufacts>div{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.stufacts dt{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:6px}
+.stufacts dd{margin:0;font-size:14px}
+.card.attn{border-left:4px solid var(--accent)}
+html.a11y-contrast .stufacts>div{background:#000;border-color:#fff}
+html.a11y-contrast .stufacts dt,html.a11y-contrast .stucount{color:#ffff00}
+html.a11y-contrast .linkb{color:#ffff00}
+@media (max-width:600px){ .stubar2{flex-direction:column;align-items:stretch} .stunav{justify-content:space-between} }
+.stufacts{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.vmbox.docbox{width:min(900px,100%);height:min(88vh,1000px);display:flex;flex-direction:column}
+.docbox .vh{flex-wrap:wrap;gap:8px}
+.docframe{flex:1;width:100%;border:0;background:#fff;border-radius:0 0 12px 12px}
+.entrow{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--line);flex-wrap:wrap}
+.entrow:first-of-type{border-top:0}
+.entico{font-size:26px;line-height:1}
+.entmeta{flex:1;min-width:200px;font-size:14px}
+.entmeta .muted{font-size:13px}
+.entbtn{display:flex;gap:6px;flex-wrap:wrap}
 </style>
 </head>
 <body>
@@ -987,7 +1074,7 @@ html.a11y-contrast .clsrow{background:#000!important;color:#fff!important;border
     </aside>
     <main><div class="wrap" id="view" tabindex="-1"></div></main>
   </div>
-  <footer class="ver">Objeto de aprendizaje integrado · Modelo CRIA · ASSURE · <b>Versión 25 (estructura · roles · accesibilidad · videos M1, M2 y M3 · Módulo 1 interactivo · validación de la ficha · instrumentos simplificados · campos obligatorios · videos de YouTube por fase · Módulo 2 interactivo con videos · identidad visual · recorrido guiado · prueba de usabilidad · Módulo 3 interactivo · infografías y prácticas nuevas en el Módulo 3 · videos de YouTube del Módulo 3)</b></footer>
+  <footer class="ver">Objeto de aprendizaje integrado · Modelo CRIA · ASSURE · <b>Versión 26 (grupo de demostración para el docente · estructura · roles · accesibilidad · videos M1, M2 y M3 · Módulo 1 interactivo · validación de la ficha · instrumentos simplificados · campos obligatorios · videos de YouTube por fase · Módulo 2 interactivo con videos · identidad visual · recorrido guiado · prueba de usabilidad · Módulo 3 interactivo · infografías y prácticas nuevas en el Módulo 3 · videos de YouTube del Módulo 3)</b></footer>
 </div>
 
 <div class="toast hidden" id="toast" role="status"></div>
@@ -1041,7 +1128,7 @@ const USERS = {
   estudiante:{ pass:"ujat2026", role:"alumno",  name:"Estudiante" },
   docente:   { pass:"ujat2026", role:"docente", name:"Docente facilitador" }
 };
-const STUDENT = "estudiante";   // estudiante cuyo avance revisa el docente
+let STUDENT = "estudiante";     // estudiante cuyo avance revisa el docente (v26: puede cambiarse en el Panel docente)
 
 /* =========================================================
    ESTADO (avance guardado en este navegador)
@@ -1049,7 +1136,7 @@ const STUDENT = "estudiante";   // estudiante cuyo avance revisa el docente
    prog[id] = "enviado" (solo Validar) -> en espera del docente
    ========================================================= */
 let user=null, role=null, prog={}, tab="tablon", openSec=null, loginRole="alumno";
-const KEY = "vfia_v2_" + STUDENT;
+let KEY = "vfia_v2_" + STUDENT;
 function load(){ try{ prog = JSON.parse(localStorage.getItem(KEY)) || {}; }catch(e){ prog = {}; } }
 function save(){ try{ localStorage.setItem(KEY, JSON.stringify(prog)); }catch(e){} }
 const sid = (m,i) => `m${m}s${i}`;
@@ -1086,12 +1173,13 @@ $("#loginForm").addEventListener("submit", e=>{
   start();
 });
 $("#logoutBtn").addEventListener("click", ()=>{
-  try{ sessionStorage.removeItem("vfia_user"); }catch(e){}
+  try{ sessionStorage.removeItem("vfia_user"); sessionStorage.removeItem("vfia_docsel"); sessionStorage.removeItem("vfia_ptab"); }catch(e){}
   user=null; role=null; $("#app").classList.add("hidden"); $("#login").classList.remove("hidden");
   $("#loginForm").reset(); setLoginRole("alumno");
 });
 function start(){
-  load(); evLoad();
+  if(role==="docente"){ demoSeed(); let sel="estudiante"; try{ sel=sessionStorage.getItem("vfia_docsel")||"estudiante"; }catch(e){} setStudent(sel); try{ PTAB=sessionStorage.getItem("vfia_ptab")||"grupo"; }catch(e){} }
+  else setStudent("estudiante");
   const doc = role==="docente";
   $("#avatar").textContent = doc ? "D" : "E";
   $("#avatar").style.background = doc ? "var(--m2)" : "";
@@ -1145,6 +1233,7 @@ function render(){
   bindVideos();
   bindCommon();
   if(tab==="pruebas") bindPruebas();
+  if(tab==="avance" && role==="docente") bindGroup();
 }
 
 function statusBadge(m,i){
@@ -1161,11 +1250,11 @@ function viewTablon(){
   <div class="banner">
     <h2>${COURSE.name}</h2>
     <p>${COURSE.audience} · Modalidad ${COURSE.modality}</p>
-    <div class="chips"><span class="chip">${COURSE.hours} horas</span><span class="chip">${COURSE.weeks} semanas</span><span class="chip">3 módulos</span><span class="chip">Avance ${role==="docente"?"del estudiante":"general"}: ${Math.round(total)} %</span></div>
+    <div class="chips"><span class="chip">${COURSE.hours} horas</span><span class="chip">${COURSE.weeks} semanas</span><span class="chip">3 módulos</span><span class="chip">Avance ${role==="docente"?"de "+esc(stuInfo(STUDENT).n):"general"}: ${Math.round(total)} %</span></div>
   </div>
   ${role==="docente" && p.length ? `<div class="notice">Tienes <b>${p.length}</b> validación(es) pendiente(s): ${p.map(x=>"Módulo "+x).join(", ")}. Revísalas en el <b>Panel docente</b>.</div>`:""}
   ${[[1,"ficha de análisis del Módulo 1","a","la"],[2,"informe de detección del Módulo 2","o","lo"],[3,"reporte de verificación del Módulo 3","o","lo"]].map(([m,t,o,la])=>
-    (role==="docente" && isWaiting(m,5) ? `<div class="notice">El estudiante envió su <b>${t}</b> para revisión. Revísa${la} en la sección Autoevaluar o en el <b>Panel docente</b>.</div>`:"") +
+    (role==="docente" && isWaiting(m,5) ? `<div class="notice">${esc(stuName())} envió su <b>${t}</b> para revisión. Revísa${la} en la sección Autoevaluar o en el <b>Panel docente</b>.</div>`:"") +
     (role==="alumno" && (evGet("m"+m+"s5").rev||{}).status==="devuelta" && !isWaiting(m,5) ? `<div class="notice">Tu <b>${t}</b> fue devuelt${o} para corrección. Revisa la retroalimentación en la sección Autoevaluar y sube una nueva versión.</div>`:"")).join("")}
   ${role==="alumno" && p.length ? `<div class="notice">Tu sección <b>Validar</b> del Módulo ${p.join(", ")} está en espera de la revisión del docente.</div>`:""}
   <div class="card"><h3>Competencia general</h3><p class="muted" style="margin:0">${COURSE.general}</p></div>
@@ -1261,7 +1350,7 @@ function viewSection(m,i){
   const mod=MODULES[m-1], c=CRIA[i];
   return `
   <div class="crumbs"><button data-back>Trabajo de clase</button> › Módulo ${m}. ${mod.title} › ${c.name}</div>
-  ${role==="docente"?'<div class="notice">Vista docente</div>':""}
+  ${role==="docente"?`<div class="notice">Vista docente · revisando a <b>${esc(stuInfo(STUDENT).n)}</b>${isDemo()?". <b>Estudiante de demostración (datos simulados):</b> se simulan su avance, sus instrumentos y sus productos; sus respuestas escritas no están cargadas.":""} <button type="button" class="btn ghost sm" style="margin-left:6px" onclick="setPtab('alumno');go('avance')">‹ Volver al Panel docente</button></div>`:""}
   <div class="sec-head">
     <span class="ico" style="background:${c.color}">${c.ic}</span>
     <div><div class="muted" style="font-size:13px">Módulo ${m} · Proceso ${i+1} de 6 · ${hrs(mod.h[c.key])}</div><h2>${c.name}</h2></div>
@@ -1288,29 +1377,13 @@ function viewAvance(){
   <button class="btn ghost" data-reset>Reiniciar avance</button>`;
 }
 
-function viewPanel(){
-  const p = pending();
-  return `<h2 style="margin-top:0">Panel docente</h2>
-  <div class="card"><h3>Validaciones pendientes</h3>
-    ${p.length ? p.map(m=>`<div class="person" style="justify-content:space-between"><div><b>Módulo ${m}. ${MODULES[m-1].title}</b><br><span class="muted" style="font-size:13px">Proceso 5: Validar · enviado por el estudiante</span></div>
-      <div style="display:flex;gap:8px"><button class="btn" data-valmod="${m}">Validar</button><button class="btn ghost" data-retmod="${m}">Devolver</button></div></div>`).join("")
-      : (fichaPanelHTML() ? '' : '<p class="muted" style="margin:0">No hay validaciones pendientes.</p>')}${fichaPanelHTML()}
-  </div>
-  <h3>Avance del estudiante</h3>${progressCards()}${progressTable()}
-  <div class="card" style="overflow-x:auto"><h3>Mapa del curso</h3>
-    <table class="prog"><thead><tr><th>Módulo</th><th>Semanas</th><th>Horas</th><th>Competencia específica</th><th>Producto</th></tr></thead><tbody>
-    ${MODULES.map(m=>`<tr><td>${m.id}. ${m.title}</td><td>${m.weeks}</td><td>${m.hours} h</td><td>${m.comp}</td><td>${m.product}</td></tr>`).join("")}
-    </tbody></table></div>
-  <div class="card"><h3>Instrumentos de evaluación</h3>${instrumentsPanel()}</div>
-  <div class="card"><h3>Diseño y pruebas del objeto de aprendizaje</h3><p class="muted">Protocolo y resultados de las pruebas de usabilidad (tareas y escala SUS), y guía de estilo con la identidad visual, la paleta, la tipografía, los íconos y las heurísticas aplicadas.</p>
-    <div class="actions"><button class="btn ghost" data-gotab="pruebas">🧪 Pruebas de usabilidad</button><button class="btn ghost" data-gotab="estilo">🎨 Guía de estilo</button></div></div>
-  <button class="btn ghost" data-reset>Reiniciar avance del estudiante</button>`;
-}
+function viewPanel(){ return viewPanel26(); }
 
 function viewPersonas(){
   return `<h2 style="margin-top:0">Personas</h2>
   <div class="card"><h3>Docente facilitador</h3><div class="person"><div class="avatar" style="background:var(--m2)">D</div><div>Docente facilitador<br><span class="muted" style="font-size:13px">Retroalimenta y valida las actividades</span></div></div></div>
-  <div class="card"><h3>Estudiantes</h3><div class="person"><div class="avatar">E</div><div>Estudiante<br><span class="muted" style="font-size:13px">Usuario de prueba</span></div></div></div>
+  <div class="card"><h3>Estudiantes</h3><div class="person"><div class="avatar">E</div><div>Estudiante<br><span class="muted" style="font-size:13px">Usuario: estudiante</span></div></div>
+    ${role==="docente"?`<p class="demo-note" style="margin-top:12px"><b>Estudiantes de demostración (datos simulados)</b></p>${DEMO.map(d=>`<div class="person"><div class="avatar" style="background:var(--m3)">${d.n[0]}</div><div>${esc(d.n)}<br><span class="muted" style="font-size:13px">${esc(d.c)} · ficticio</span></div></div>`).join("")}`:""}</div>
   <div class="card"><h3>Diseño instruccional</h3><p class="muted" style="margin:0">Emanuel Badal García · Maestría en Tecnologías para el Aprendizaje y el Conocimiento, UJAT. Modelo ASSURE y Modelo CRIA.</p></div>`;
 }
 
@@ -1370,7 +1443,7 @@ let tt; function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList
    ========================================================= */
 
 /* ---------- Evidencias del estudiante (guardadas en este navegador) ---------- */
-const EVKEY = "vfia_ev2_" + STUDENT;
+let EVKEY = "vfia_ev2_" + STUDENT;
 let ev = {};
 function evLoad(){ try{ ev = JSON.parse(localStorage.getItem(EVKEY)) || {}; }catch(e){ ev = {}; } }
 function evSave(){ try{ localStorage.setItem(EVKEY, JSON.stringify(ev)); }catch(e){} }
@@ -2754,7 +2827,7 @@ function uploadHTML(){
     ? `<div class="revcard ${rev.status}"><b>${rev.status==="validada"?`✔ Validad${P.o} por el docente`:`↩ Devuelt${P.o} por el docente para corrección`}</b><span class="muted"> · ${fmtDate(rev.date)}</span><p>${esc(rev.fb)}</p></div>` : "";
   if(doc){
     if(!up) return `<p class="muted" style="margin:0">El estudiante aún no sube su ${P.n} final.</p>${fbCard}`;
-    return `${card}<div class="actions" style="margin-top:8px"><button type="button" class="btn ghost" data-updl>⬇ Descargar ${P.el} ${P.n} del estudiante</button></div>
+    return `${card}<div class="actions" style="margin-top:8px">${isDemo()?`<button type="button" class="btn" data-demoview>👁 Ver en pantalla</button>`:""}<button type="button" class="btn ghost" data-updl>⬇ ${isDemo()?"Descargar Word":`Descargar ${P.el} ${P.n} del estudiante`}</button></div>
       ${wt ? `<div class="fld"><label class="flab" for="fichaFb">Retroalimentación para el estudiante</label>
           <textarea id="fichaFb" rows="3" placeholder="Escribe tu retroalimentación. Si ${P.la} devuelves, indica qué debe corregir.">${esc(rev.draft||"")}</textarea></div>
           <p class="tnote">Califíca${P.la} con ${P.rub} (instrumento de esta sección) y elige <b>Validar</b> o <b>Devolver</b> abajo.</p>` : fbCard}`;
@@ -2789,10 +2862,12 @@ function bindUpload(){
     ["dragleave","drop"].forEach(ev=>drop.addEventListener(ev,e=>{ e.preventDefault(); drop.classList.remove("over"); }));
     drop.addEventListener("drop",e=>take(e.dataTransfer.files[0])); }
   const dl=box.querySelector("[data-updl]"); if(dl) dl.addEventListener("click",async()=>{
+    if(isDemo()) return demoDownload(m);
     const up=evGet(P.s).upload; let f=null; try{ f=await idbGet(P.key); }catch(e){}
     if(!f) return toast("No se encontró el archivo en este navegador.");
     const a=document.createElement("a"); a.href=URL.createObjectURL(f); a.download=up.name; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},500);
   });
+  const vw=box.querySelector("[data-demoview]"); if(vw) vw.addEventListener("click",()=>demoView(m));
   const rm=box.querySelector("[data-uprm]"); if(rm) rm.addEventListener("click",async()=>{ await idbDel(P.key); delete evGet(P.s).upload; evSave(); toast("Archivo quitado."); redraw(); });
 }
 
@@ -5299,6 +5374,333 @@ document.addEventListener("click", e=>{
   if(e.target.closest("[data-ord3chk]")){ st.ord3chk=true; save(); document.getElementById("ord3Box").outerHTML=ord3HTML(); return; }
   if(e.target.closest("[data-ord3reset]")){ st.ord3=[]; st.ord3chk=false; save(); document.getElementById("ord3Box").outerHTML=ord3HTML(); }
 });
+
+/* =========================================================
+   v26 · GRUPO DE DEMOSTRACIÓN PARA EL DOCENTE
+   10 estudiantes ficticios con avances distintos (datos simulados)
+   para mostrar cómo el docente da seguimiento a su grupo.
+   Se guardan en este navegador; el docente puede validar,
+   devolver y calificar, y restablecerlos cuando quiera.
+   ========================================================= */
+const DEMO_VER = "26b";
+const DEMO = [
+  { id:"demo01", n:"Ana Sofía Méndez López",      c:"Lic. en Derecho",                 fin:3, cur:[],          last:"2026-11-12", q:.95 },
+  { id:"demo02", n:"Luis Fernando Cruz Hernández", c:"Ing. en Sistemas Computacionales", fin:3, cur:[],          last:"2026-11-10", q:.85 },
+  { id:"demo03", n:"María José Torres Ramírez",   c:"Lic. en Enfermería",              fin:2, cur:[0,1,2,3,4], prod:"enviada", last:"2026-11-13", q:.9 },
+  { id:"demo04", n:"Diego Alejandro Pérez Gómez", c:"Ing. Civil",                      fin:2, cur:[0,1,2],     last:"2026-11-11", q:.75 },
+  { id:"demo05", n:"Valeria Guadalupe Sánchez Ruiz", c:"Lic. en Psicología",           fin:1, cur:[0,1,2,3],   val:true, last:"2026-11-13", q:.85 },
+  { id:"demo06", n:"Carlos Eduardo Jiménez Ortiz", c:"Lic. en Contaduría Pública",     fin:1, cur:[0,1],       last:"2026-11-06", q:.7 },
+  { id:"demo07", n:"Fernanda Isabel Ramos Castillo", c:"Lic. en Ciencias de la Comunicación", fin:1, cur:[0,1,2,3,4], prod:"devuelta", last:"2026-11-09", q:.6 },
+  { id:"demo08", n:"Jorge Antonio Vázquez Morales", c:"Ing. Química",                  fin:0, cur:[0,1,2,3],   val:true, last:"2026-11-12", q:.8 },
+  { id:"demo09", n:"Daniela Alejandra Ortiz Chablé", c:"Lic. en Ciencias de la Educación", fin:0, cur:[0],      last:"2026-11-04", q:.7 },
+  { id:"demo10", n:"Ricardo Manuel Hernández Pérez", c:"Ing. en Agronomía",            fin:0, cur:[],          last:null, q:.8 }
+];
+const LOCAL_STU = { id:"estudiante", n:"Estudiante", c:"Usuario: estudiante" };
+const isDemo = () => STUDENT.startsWith("demo");
+const stuInfo = id => DEMO.find(d=>d.id===id) || LOCAL_STU;
+const stuName = () => isDemo() ? stuInfo(STUDENT).n : "El estudiante";
+const DEMO_FB = {
+  validada:["Buen trabajo: cumple con todos los criterios de la rúbrica.","Muy completo y bien argumentado. Cuida el formato APA 7 en dos referencias.","Cumple lo solicitado; las conclusiones pueden ser más específicas."],
+  devuelta:"Solo revisaste 3 fuentes y no explicas cómo comprobaste que la fuente falsa no existe. Además, aplicaste 2 de los 5 criterios, usaste 2 herramientas (se piden al menos 3) y tus referencias no siguen el formato APA 7. Completa el análisis y vuelve a subir tu informe."
+};
+function demoRand(seed){ let x=0; for(const ch of seed) x=(x*31+ch.charCodeAt(0))>>>0; return ()=>{ x=(x*1103515245+12345)>>>0; return (x>>>8)/16777216; }; }
+function demoBuild(d){
+  const prog={}, ev={}, R=demoRand(d.id), eg=s=>ev[s]||(ev[s]={});
+  const t0=d.last ? new Date(d.last+"T18:00:00").getTime() : Date.now();
+  const doneSec=new Set();
+  for(let m=1;m<=3;m++){
+    let secs=[];
+    if(m<=d.fin) secs=[0,1,2,3,4,5]; else if(m===d.fin+1) secs=d.cur.slice();
+    secs.forEach(i=>{ prog[sid(m,i)]=true; doneSec.add(sid(m,i)); });
+    if(m===d.fin+1 && d.val){ prog[sid(m,VAL)]="enviado"; doneSec.add(sid(m,VAL)); }
+    const P=PROD[m], ape=d.n.split(" ").slice(-2,-1)[0], nom=d.n.split(" ")[0];
+    const up={ name:P.file.replace("Apellido",ape).replace("Nombre",nom).replace(/\.docx$/,".doc").normalize("NFD").replace(/[\u0300-\u036f]/g,""), size:Math.round(180000+R()*900000), type:"application/vnd.openxmlformats-officedocument.wordprocessingml.document" };
+    if(m<=d.fin){ up.date=t0-(d.fin-m+1)*9*864e5; eg(P.s).upload=up; eg(P.s).rev={ status:"validada", fb:DEMO_FB.validada[Math.floor(R()*3)], date:up.date+2*864e5 }; }
+    else if(m===d.fin+1 && d.prod){
+      up.date=t0-(d.prod==="devuelta"?3:0)*864e5; eg(P.s).upload=up;
+      if(d.prod==="enviada"){ prog[sid(m,5)]="enviado"; eg(P.s).rev={ status:"enviada", date:up.date }; }
+      else eg(P.s).rev={ status:"devuelta", fb:DEMO_FB.devuelta, date:up.date+864e5 };
+    }
+  }
+  const lvl=()=>{ const r=R(); return r<d.q-.15?0:r<d.q+.1?1:2; };          // rúbrica: 0 Excelente, 1 Suficiente, 2 Insuficiente
+  Object.keys(INSTR).forEach(k=>{
+    const s=INS_SEC[k], x=INSTR[k], m=+s[1], i=+s[3];
+    const finished = m<=d.fin, inSec = doneSec.has(s) || (i===5 && (eg(s).upload));
+    if(!finished && !inSec) return;
+    if(x.type==="escala"){ if(!finished && !(prog[s]===true || prog[s]==="enviado")) return; x.criteria.forEach((_,j)=>{ eg(s)["e"+j]=Math.max(2,Math.min(4,Math.round(2+d.q*2+(R()-.5)))); }); return; }
+    const self={}, doc={};
+    x.criteria.forEach((_,j)=>{ self[j] = x.type==="cotejo" ? (R()<d.q+.08?1:0) : Math.max(0,lvl()-1); });
+    const graded = finished || (prog[s]===true && i<4 && R()<.7);
+    if(graded) x.criteria.forEach((_,j)=>{ doc[j] = x.type==="cotejo" ? (R()<d.q?1:0) : lvl(); });
+    eg(s)["ins_"+k]={ self, doc };
+  });
+  return { prog, ev };
+}
+function demoSeed(force){
+  let ok=false; try{ ok = localStorage.getItem("vfia_demo_ver")===DEMO_VER; }catch(e){}
+  if(ok && !force) return;
+  DEMO.forEach(d=>demoReset(d.id));
+  try{ localStorage.setItem("vfia_demo_ver", DEMO_VER); }catch(e){}
+}
+function demoReset(id){
+  const d=DEMO.find(x=>x.id===id); if(!d) return;
+  const b=demoBuild(d);
+  try{ localStorage.setItem("vfia_v2_"+id, JSON.stringify(b.prog)); localStorage.setItem("vfia_ev2_"+id, JSON.stringify(b.ev)); }catch(e){}
+}
+function setStudent(id){
+  if(id!=="estudiante" && !DEMO.find(d=>d.id===id)) id="estudiante";
+  STUDENT=id; KEY="vfia_v2_"+id; EVKEY="vfia_ev2_"+id;
+  try{ if(role==="docente") sessionStorage.setItem("vfia_docsel", id); }catch(e){}
+  load(); evLoad();
+}
+function stuStats(id){
+  let p={}; try{ p=JSON.parse(localStorage.getItem("vfia_v2_"+id))||{}; }catch(e){}
+  let e={}; try{ e=JSON.parse(localStorage.getItem("vfia_ev2_"+id))||{}; }catch(er){}
+  const done=(m,i)=>p[sid(m,i)]===true, wait=(m,i)=>p[sid(m,i)]==="enviado";
+  const pct=m=>Math.round(100*CRIA.filter((_,i)=>done(m,i)).length/CRIA.length);
+  const total=Math.round((pct(1)+pct(2)+pct(3))/3);
+  let cur=null; for(const m of [1,2,3]){ const i=CRIA.findIndex((_,k)=>!done(m,k)); if(i>=0){ cur={m,i}; break; } }
+  const pend=[];
+  [1,2,3].forEach(m=>{ if(wait(m,VAL)) pend.push({t:`Validar · Módulo ${m}`, m, i:VAL});
+    if(wait(m,5)) pend.push({t:`Revisar ${PROD[m].n} · Módulo ${m}`, m, i:5}); });
+  const back=[1,2,3].filter(m=>((e["m"+m+"s5"]||{}).rev||{}).status==="devuelta" && !wait(m,5));
+  let estado, cls;
+  if(total===100){ estado="🏅 Curso terminado"; cls="ok"; }
+  else if(total===0 && !pend.length){ estado="Sin iniciar"; cls="lock"; }
+  else if(pend.length){ estado="En espera del docente"; cls="wait"; }
+  else if(back.length){ estado=`Corrigiendo ${PROD[back[0]].n}`; cls="wait"; }
+  else { estado="En progreso"; cls=""; }
+  return { pct, total, cur, pend, back, estado, cls };
+}
+const fmtDay = s => s ? new Date(s+"T12:00:00").toLocaleDateString("es-MX",{day:"numeric",month:"short"}) : "—";
+function groupPanelHTML(){
+  const rows=[LOCAL_STU, ...DEMO].map(d=>({ d, s:stuStats(d.id) }));
+  const demo=rows.slice(1), fin=demo.filter(r=>r.s.total===100).length, pend=demo.reduce((a,r)=>a+r.s.pend.length,0);
+  const avg=Math.round(demo.reduce((a,r)=>a+r.s.total,0)/demo.length);
+  return `<div class="card grp"><h3>Mi grupo</h3>
+    <p class="demo-note" role="note"><b>Estudiantes de demostración (datos simulados).</b> Los 10 estudiantes de esta lista son ficticios: muestran cómo el docente da seguimiento a un grupo con avances distintos. Sus nombres y avances no corresponden a personas reales.</p>
+    <div class="grp-kpi"><div><b>${demo.length}</b><span>estudiantes</span></div><div><b>${avg} %</b><span>avance promedio</span></div><div><b>${fin}</b><span>terminaron el curso</span></div><div><b>${pend}</b><span>revisiones pendientes</span></div></div>
+    <div class="tscroll"><table class="prog grp-t"><thead><tr><th>Estudiante</th><th>Avance general</th><th>M1</th><th>M2</th><th>M3</th><th>Proceso actual</th><th>Estado</th><th>Última actividad</th><th><span class="sr-only">Acción</span></th></tr></thead><tbody>
+    ${rows.map(({d,s})=>`<tr><td><b>${esc(d.n)}</b><br><span class="muted" style="font-size:12px">${esc(d.c)}</span></td>
+      <td><div class="grp-av"><div class="bar"><span style="width:${s.total}%"></span></div><b>${s.total} %</b></div></td>
+      <td>${s.pct(1)} %</td><td>${s.pct(2)} %</td><td>${s.pct(3)} %</td>
+      <td>${s.cur?`Módulo ${s.cur.m} · ${CRIA[s.cur.i].name}`:"—"}</td>
+      <td><span class="badge ${s.cls}">${s.estado}</span>${s.pend.map(p=>`<br><span class="muted" style="font-size:12px">⏳ ${p.t}</span>`).join("")}</td>
+      <td>${d.id.startsWith("demo")?fmtDay(d.last):"—"}</td>
+      <td><button type="button" class="btn ghost sm" data-stu="${d.id}" aria-label="Ver el avance de ${esc(d.n)}">Ver</button></td></tr>`).join("")}
+    </tbody></table></div></div>`;
+}
+/* ---------- Panel docente con pestañas internas ---------- */
+let PTAB="grupo";
+function setPtab(t){ if(t==="grupo"||t==="alumno"||t==="curso"){} else t="grupo"; PTAB=t; try{ sessionStorage.setItem("vfia_ptab", t); }catch(e){} }
+const ROSTER = () => [LOCAL_STU, ...DEMO];
+function groupPendHTML(){
+  const items=[];
+  ROSTER().forEach(d=>stuStats(d.id).pend.forEach(p=>items.push({d,p})));
+  if(!items.length) return `<div class="card"><h3>Pendientes por revisar</h3><p class="muted" style="margin:0">No hay entregas pendientes en el grupo.</p></div>`;
+  return `<div class="card"><h3>Pendientes por revisar <span class="pcount">${items.length}</span></h3>
+    ${items.map(({d,p})=>`<div class="person pendrow"><div class="avatar" style="background:var(--m3)">${esc(d.n[0])}</div><div style="flex:1"><b>${esc(d.n)}</b><br><span class="muted" style="font-size:13px">⏳ ${p.t}</span></div>
+      <button type="button" class="btn sm" data-review="${d.id}|${p.m}|${p.i}">Revisar</button></div>`).join("")}</div>`;
+}
+function stuHeaderHTML(){
+  const r=ROSTER(), k=r.findIndex(d=>d.id===STUDENT), d=r[k], st=stuStats(d.id);
+  const prev=r[(k-1+r.length)%r.length], next=r[(k+1)%r.length];
+  const pend = st.pend.length ? st.pend.map(p=>p.t).join(" · ") : (st.back.length ? `Corrigiendo su ${PROD[st.back[0]].n} (Módulo ${st.back[0]})` : "Ninguno");
+  return `<nav class="stubar2" aria-label="Navegación entre estudiantes">
+      <div class="crumbs2"><button type="button" class="linkb" data-ptab="grupo">👥 Mi grupo</button><span aria-hidden="true">›</span><b>${esc(d.n)}</b></div>
+      <div class="stunav"><button type="button" class="btn ghost sm" data-stu2="${prev.id}" aria-label="Estudiante anterior: ${esc(prev.n)}">‹<span class="nvt"> Anterior</span></button>
+        <span class="stucount">Estudiante ${k+1} de ${r.length}</span>
+        <button type="button" class="btn ghost sm" data-stu2="${next.id}" aria-label="Siguiente estudiante: ${esc(next.n)}"><span class="nvt">Siguiente </span>›</button></div>
+    </nav>
+    <div class="card stucard">
+      <div class="stuid"><div class="avatar big" style="background:${isDemo()?"var(--m3)":"var(--brand)"}">${esc(d.n[0])}</div>
+        <div style="flex:1;min-width:0"><h3 id="stuHead" style="margin:0">${esc(d.n)} ${isDemo()?'<span class="badge demo">Demostración</span>':""}</h3><span class="muted" style="font-size:14px">${esc(d.c)}</span></div></div>
+      <dl class="stufacts">
+        <div><dt>Avance general</dt><dd><div class="grp-av"><div class="bar" style="width:90px"><span style="width:${st.total}%"></span></div><b>${st.total} %</b></div></dd></div>
+        <div><dt>Estado</dt><dd><span class="badge ${st.cls}">${st.estado}</span></dd></div>
+        <div><dt>Proceso actual</dt><dd>${st.cur?`Módulo ${st.cur.m} · ${CRIA[st.cur.i].name}`:"Terminó los 3 módulos"}</dd></div>
+        <div><dt>Por revisar</dt><dd>${st.pend.length?"⏳ ":""}${pend}</dd></div>
+        <div><dt>Última actividad</dt><dd>${isDemo()&&d.last?fmtDay(d.last):"—"}</dd></div>
+      </dl>
+    </div>`;
+}
+function entregasHTML(){
+  const rows=[1,2,3].map(m=>{
+    const P=PROD[m], st=evGet(P.s), up=st.upload, rev=(st.rev||{}).status, ok=isDone(m,5), wt=isWaiting(m,5);
+    const name=`<b>Módulo ${m} · ${P.tit.replace(" (producto)","")}</b>`;
+    if(!up) return `<div class="entrow"><div class="entico" aria-hidden="true">📄</div><div class="entmeta">${name}<br><span class="muted">Aún no lo entrega</span></div><span class="badge">Sin entregar</span></div>`;
+    const [b,c] = ok?[`✔ Validad${P.o}`,"ok"] : wt?["⏳ En revisión","wait"] : rev==="devuelta"?[`↩ Devuelt${P.o}`,"wait"] : ["Subido",""];
+    return `<div class="entrow"><div class="entico" aria-hidden="true">${fileIcon(up.name)}</div>
+      <div class="entmeta">${name}<br><span class="muted">${esc(up.name)} · ${fmtSize(up.size)} · ${fmtDate(up.date)}</span></div>
+      <span class="badge ${c}">${b}</span>
+      <div class="entbtn">${isDemo()?`<button type="button" class="btn sm" data-ever="${m}">👁 Ver</button>`:""}<button type="button" class="btn ghost sm" data-edl="${m}">⬇ Word</button>${wt?`<button type="button" class="btn sm" data-osec="${m}|5">Revisar</button>`:""}</div></div>`;
+  }).join("");
+  return `<div class="card"><h3>📂 Entregas del estudiante</h3>${rows}</div>`;
+}
+async function entregaDownload(m){
+  if(isDemo()) return demoDownload(m);
+  const P=PROD[m], up=evGet(P.s).upload; let f=null; try{ f=await idbGet(P.key); }catch(e){}
+  if(!f) return toast("No se encontró el archivo en este navegador.");
+  const a=document.createElement("a"); a.href=URL.createObjectURL(f); a.download=up.name; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},500);
+}
+function stuModulesHTML(){
+  return `<div class="grid3 pmods">${MODULES.map(m=>`<div class="card" style="margin:0"><h3 style="margin-bottom:6px">Módulo ${m.id}</h3>
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><div class="bar"><span style="width:${modPct(m.id)}%"></span></div><b>${modPct(m.id)} %</b></div>
+    <ul class="plist">${CRIA.map((c,i)=>`<li><button type="button" class="plink" data-osec="${m.id}|${i}" aria-label="Abrir ${c.name} del Módulo ${m.id}"><span>${i+1}. ${c.name}</span>${statusBadge(m.id,i)}</button></li>`).join("")}</ul></div>`).join("")}</div>`;
+}
+function viewPanel26(){
+  const nP = ROSTER().reduce((a,d)=>a+stuStats(d.id).pend.length,0);
+  const tabs=[["grupo",`👥 Mi grupo${nP?` <span class="pcount">${nP}</span>`:""}`],["alumno",`🧑‍🎓 ${esc(stuInfo(STUDENT).n)}`],["curso","🗺️ Curso y pruebas"]];
+  let body="";
+  if(PTAB==="alumno"){
+    const p=pending();
+    body = `${stuHeaderHTML()}
+    ${(p.length || fichaPanelHTML()) ? `<div class="card attn"><h3>⏳ Por revisar</h3>
+      ${p.length ? p.map(m=>`<div class="person" style="justify-content:space-between"><div><b>Módulo ${m}. ${MODULES[m-1].title}</b><br><span class="muted" style="font-size:13px">Proceso 5: Validar · enviado por el estudiante</span></div>
+        <div style="display:flex;gap:8px"><button class="btn" data-valmod="${m}">Validar</button><button class="btn ghost" data-retmod="${m}">Devolver</button></div></div>`).join("")
+        : ''}${fichaPanelHTML()}</div>` : ''}
+    ${entregasHTML()}
+    <h3 class="psub">Avance por módulo <span class="muted" style="font-weight:400;font-size:13px">· toca un proceso para abrirlo</span></h3>${stuModulesHTML()}
+    <div class="card" style="margin-top:14px"><h3>Instrumentos de evaluación</h3>${instrumentsPanel()}</div>
+    ${isDemo()?"":'<div class="actions"><button class="btn ghost" data-reset>Reiniciar avance del estudiante</button></div>'}`;
+  } else if(PTAB==="curso"){
+    body = `<div class="card" style="overflow-x:auto"><h3>Mapa del curso</h3>
+      <table class="prog"><thead><tr><th>Módulo</th><th>Semanas</th><th>Horas</th><th>Competencia específica</th><th>Producto</th></tr></thead><tbody>
+      ${MODULES.map(m=>`<tr><td>${m.id}. ${m.title}</td><td>${m.weeks}</td><td>${m.hours} h</td><td>${m.comp}</td><td>${m.product}</td></tr>`).join("")}
+      </tbody></table></div>
+    <div class="card"><h3>Diseño y pruebas del objeto de aprendizaje</h3><p class="muted">Protocolo y resultados de las pruebas de usabilidad (tareas y escala SUS), y guía de estilo con la identidad visual, la paleta, la tipografía, los íconos y las heurísticas aplicadas.</p>
+      <div class="actions"><button class="btn ghost" data-gotab="pruebas">🧪 Pruebas de usabilidad</button><button class="btn ghost" data-gotab="estilo">🎨 Guía de estilo</button></div></div>
+    <div class="card"><h3>Estudiantes de demostración</h3><p class="muted">Regresa a los 10 estudiantes de demostración a su avance original (por ejemplo, después de validar o devolver sus entregas).</p>
+      <div class="actions"><button class="btn ghost" data-demoreset>Restablecer estudiantes de demostración</button></div></div>`;
+  } else {
+    body = `${groupPendHTML()}${groupPanelHTML()}`;
+  }
+  return `<h2 style="margin-top:0">Panel docente</h2>
+  <div class="ptabs" role="tablist" aria-label="Secciones del Panel docente">${tabs.map(([k,l])=>`<button type="button" role="tab" aria-selected="${PTAB===k}" data-ptab="${k}">${l}</button>`).join("")}</div>
+  <div role="tabpanel">${body}</div>`;
+}
+function stuPickerHTML(){
+  return `<div class="stupick"><label for="stuSel">Estás viendo el avance de:</label>
+    <select id="stuSel">${[LOCAL_STU, ...DEMO].map(d=>`<option value="${d.id}" ${d.id===STUDENT?"selected":""}>${esc(d.n)}</option>`).join("")}</select>
+    ${isDemo()?'<span class="badge">Demostración</span>':""}</div>`;
+}
+function bindGroup(){
+  const top=()=>window.scrollTo({top:0,behavior:"smooth"});
+  const toStu=id=>{ setStudent(id); setPtab("alumno"); render(); top(); };
+  document.querySelectorAll("[data-ptab]").forEach(b=>b.addEventListener("click",()=>{ setPtab(b.dataset.ptab); render(); top(); }));
+  document.querySelectorAll("[data-stu],[data-stu2]").forEach(b=>b.addEventListener("click",()=>toStu(b.dataset.stu||b.dataset.stu2)));
+  document.querySelectorAll("#stuSel").forEach(s=>s.addEventListener("change",()=>toStu(s.value)));
+  document.querySelectorAll("[data-review]").forEach(b=>b.addEventListener("click",()=>{ const [id,m,i]=b.dataset.review.split("|"); setStudent(id); setPtab("alumno"); go("trabajo",{m:+m,i:+i}); }));
+  document.querySelectorAll("[data-ever]").forEach(b=>b.addEventListener("click",()=>demoView(+b.dataset.ever)));
+  document.querySelectorAll("[data-edl]").forEach(b=>b.addEventListener("click",()=>entregaDownload(+b.dataset.edl)));
+  document.querySelectorAll("[data-osec]").forEach(b=>b.addEventListener("click",()=>{ const [m,i]=b.dataset.osec.split("|"); go("trabajo",{m:+m,i:+i}); }));
+  const rd=document.querySelector("[data-demoreset]");
+  if(rd) rd.addEventListener("click",()=>{ if(window.confirm("¿Restablecer los 10 estudiantes de demostración a su avance original?")){ demoSeed(true); setStudent(STUDENT); render(); toast("Estudiantes de demostración restablecidos."); }});
+}
+
+/* ---------- v26 · Entregas de ejemplo de los estudiantes de demostración ---------- */
+const DEMO_TEMA = {
+  "Lic. en Derecho":"uso de la IA generativa en la investigación jurídica",
+  "Ing. en Sistemas Computacionales":"uso de asistentes de IA en el desarrollo de software",
+  "Lic. en Enfermería":"uso de la IA generativa en la educación en enfermería",
+  "Ing. Civil":"aplicaciones de la IA en el diseño de estructuras",
+  "Lic. en Psicología":"uso de chatbots de IA en el apoyo psicológico",
+  "Lic. en Contaduría Pública":"uso de la IA en la auditoría contable",
+  "Lic. en Ciencias de la Comunicación":"IA generativa y desinformación en medios digitales",
+  "Ing. Química":"uso de la IA en la simulación de procesos químicos",
+  "Lic. en Ciencias de la Educación":"IA generativa en la evaluación del aprendizaje",
+  "Ing. en Agronomía":"uso de la IA en la agricultura de precisión"
+};
+const DEMO_TOOLS = ["ChatGPT","Gemini","Microsoft Copilot"];
+const DEMO_SRC = [
+  { r:REFS.bhatt, o:"Artículo de revista", ex:0, cr:"Autoridad, actualidad, precisión, objetividad y propósito", dec:0 },
+  { r:"Walters, W. H., &amp; Wilder, E. I. (2022). Fabrication and errors in the bibliographic citations generated by ChatGPT. <i>Nature, 13</i>, 14045.", o:"Artículo de revista", ex:1, cr:"Autoridad, actualidad, precisión, objetividad y propósito", dec:1, fix:"El artículo existe, pero se publicó en 2023 en <i>Scientific Reports</i>, no en <i>Nature</i>." },
+  { r:"Ramírez, J., &amp; Castillo, A. (2022). Inteligencia artificial y verificación de fuentes en la educación superior latinoamericana. <i>Revista Mexicana de Tecnología Educativa, 9</i>(2), 33–48. https://doi.org/10.5555/rmte.2022.0092", o:"Artículo de revista", ex:2, cr:"No aplica (no existe)", dec:2, fix:"El DOI usa el prefijo de pruebas 10.5555 y el título no aparece en Google Scholar ni en Scopus." },
+  { r:REFS.ji, o:"Artículo de revista", ex:0, cr:"Autoridad, actualidad, precisión, objetividad y propósito", dec:0 },
+  { r:REFS.miao, o:"Documento institucional", ex:0, cr:"Autoridad, actualidad, precisión, objetividad y propósito", dec:0 },
+  { r:"Hernández, P. (2021). <i>Alucinaciones de los modelos de lenguaje en trabajos universitarios</i>. Editorial Académica del Sureste.", o:"Libro", ex:2, cr:"No aplica (no existe)", dec:2, fix:"No hay registro del libro ni de la editorial en catálogos ni en Google Scholar." },
+  { r:REFS.wineburg, o:"Artículo de revista", ex:0, cr:"Autoridad, precisión, objetividad y propósito", dec:0 },
+  { r:"Kasneci, E., et al. (2022). ChatGPT for good? On opportunities and challenges of large language models for education. <i>Computers &amp; Education, 103</i>, 102274.", o:"Artículo de revista", ex:1, cr:"Autoridad, actualidad, precisión, objetividad y propósito", dec:1, fix:"Existe, pero se publicó en 2023 en <i>Learning and Individual Differences</i> (https://doi.org/10.1016/j.lindif.2023.102274)." },
+  { r:"Smith, J. A., &amp; Lee, K. (2023). Large language models and citation accuracy in higher education. <i>Journal of Digital Learning Research, 18</i>(4), 211–229. https://doi.org/10.5555/jdlr.2023.184", o:"Artículo de revista", ex:2, cr:"No aplica (no existe)", dec:2, fix:"El DOI no resuelve en doi.org y la revista no está indizada en Scopus ni en Web of Science." },
+  { r:"Breakstone, J., Smith, M., Connors, P., Ortega, T., Kerr, D., &amp; Wineburg, S. (2021). Lateral reading: College students learn to critically evaluate internet sources in an online course. <i>Harvard Kennedy School Misinformation Review, 2</i>(1). https://doi.org/10.37016/mr-2020-56", o:"Artículo de revista", ex:0, cr:"Autoridad, actualidad, precisión, objetividad y propósito", dec:0 }
+];
+const DEMO_FIXED = {
+  1:"Walters, W. H., &amp; Wilder, E. I. (2023). Fabrication and errors in the bibliographic citations generated by ChatGPT. <i>Scientific Reports, 13</i>, Artículo 14045. https://doi.org/10.1038/s41598-023-41032-5",
+  7:"Kasneci, E., Seßler, K., Küchemann, S., Bannert, M., Dementieva, D., Fischer, F., Gasser, U., Groh, G., Günnemann, S., Hüllermeier, E., Krusche, S., Kutyniok, G., Michaeli, T., Nerdel, C., Pfeffer, J., Poquet, O., Sailer, M., Schmidt, A., Seidel, T., … Kasneci, G. (2023). ChatGPT for good? On opportunities and challenges of large language models for education. <i>Learning and Individual Differences, 103</i>, Artículo 102274. https://doi.org/10.1016/j.lindif.2023.102274"
+};
+function demoDocHTML(m){
+  const d=stuInfo(STUDENT), k=DEMO.indexOf(d), up=evGet(PROD[m].s).upload||{}, rev=(evGet(PROD[m].s).rev||{}).status;
+  const tema=DEMO_TEMA[d.c]||"uso de la IA generativa en la universidad", tool=DEMO_TOOLS[k%3];
+  const bad = m===2 && rev==="devuelta";
+  const ref = r=>`<p class="ref">${r}</p>`;
+  const head = `<div class="demo">EJEMPLO DE DEMOSTRACIÓN (ENTREGA SIMULADA) · Documento generado por el curso para mostrar la vista del docente; no es el trabajo de un estudiante real.</div>
+    <p>Universidad Juárez Autónoma de Tabasco · Curso «Verificación de Fuentes con IA para Universitarios»</p>
+    <p><b>Estudiante:</b> ${esc(d.n)} · ${esc(d.c)}<br><b>Fecha de entrega:</b> ${up.date?new Date(up.date).toLocaleDateString("es-MX",{day:"numeric",month:"long",year:"numeric"}):"—"}</p>`;
+  let title, body;
+  if(m===1){
+    const casos=["Caso 2. Estudio de referencias generadas por ChatGPT (Walters y Wilder, 2023)","Caso 1. Abogados sancionados por casos inventados (Mata v. Avianca, 2023)","Caso 3. Artículos médicos generados por ChatGPT (Bhattacharyya et al., 2023)"];
+    title="Ficha de análisis «¿Por qué la IA inventa fuentes?»";
+    body=`<p>Módulo 1. Fundamentos de IA y fuentes falsas · Producto de la competencia específica 1</p>
+    <h3>1. ¿Qué es la IA generativa y cómo funciona un modelo de lenguaje?</h3><p>La IA generativa crea textos, imágenes o código nuevos a partir de lo que aprendió de grandes cantidades de datos. Un modelo de lenguaje como ${tool} predice, palabra por palabra, cuál es la continuación más probable de un texto; por eso sus respuestas suenan naturales, aunque el modelo no consulta una base de datos ni comprueba que lo que dice sea verdad.</p>
+    <h3>2. ¿Por qué la IA genera fuentes falsas?</h3><p>Porque cuando le pido una referencia, el modelo arma una que «parece» correcta: combina nombres de autores, títulos y revistas que suelen aparecer juntos. Si no encuentra un patrón exacto, completa los datos con lo más probable y el resultado puede ser una referencia que no existe o que tiene el año, la revista o el DOI equivocados. A esto se le llama alucinación (Ji et al., 2023).</p>
+    <h3>3. Caso real que más me enseñó</h3><p>${casos[k%3]}</p>
+    <h3>¿Qué aprendí de ese caso?</h3><p>Que una referencia bien escrita no garantiza que sea real, y que no basta con preguntarle a la IA si su fuente existe, porque puede responder que sí. En mi carrera (${esc(d.c)}) citar una fuente inventada puede costar una calificación o la credibilidad de un trabajo.</p>
+    <h3>4. Riesgos de usar la IA en mis trabajos académicos</h3><ul><li>Citar fuentes que no existen</li><li>Perder puntos o reprobar un trabajo</li><li>Faltar a la integridad académica</li><li>Perder credibilidad</li></ul>
+    <h3>5. ¿Cómo voy a anticipar esos riesgos?</h3><ul><li>Verificar cada referencia antes de citarla</li><li>Abrir siempre el DOI</li><li>Buscar el título en Google Scholar</li><li>Citar en APA 7 solo fuentes verificadas</li></ul>
+    <h3>6. Referencias que consulté</h3>${[REFS.ji,REFS.walters,REFS.bhatt].map(ref).join("")}`;
+  } else if(m===2){
+    title="Informe de detección de fuentes falsas";
+    body = bad ? `<p>Módulo 2. Criterios y herramientas de verificación · Producto de la competencia específica 2</p>
+    <h3>1. Tema de mi carrera y herramienta de IA que usé</h3><p>${tema}, ${tool}</p>
+    <h3>2. Fuentes sugeridas por la IA que revisé</h3><p>3 fuentes, de las cuales 1 resultó falsa.</p>
+    <h3>3. Fuentes falsas o con errores que detecté y cómo lo comprobé</h3><p>La de Ramírez y Castillo (2022) es falsa.</p>
+    <h3>4. Herramientas que usé</h3><ul><li>Google Scholar</li><li>doi.org</li></ul>
+    <h3>5. Criterios que apliqué</h3><ul><li>Autoridad</li><li>Actualidad</li></ul>
+    <h3>6. Conclusión</h3><p>Hay que revisar las fuentes de la IA.</p>
+    <h3>7. Referencias que consulté</h3><p>wineburg y mcgrew 2019 lateral reading teachers college record</p><p>Kapoun, J. 1998, Teaching undergrads web evaluation.</p>`
+    : `<p>Módulo 2. Criterios y herramientas de verificación · Producto de la competencia específica 2</p>
+    <h3>1. Tema de mi carrera y herramienta de IA que usé</h3><p>${tema[0].toUpperCase()+tema.slice(1)} · ${tool}</p>
+    <h3>2. Fuentes sugeridas por la IA que revisé</h3><p>Revisé 5 fuentes; 2 resultaron falsas o con datos incorrectos.</p>
+    <h3>3. Fuentes falsas o con errores que detecté y cómo lo comprobé</h3><p><b>Ramírez y Castillo (2022):</b> no existe. El DOI usa el prefijo de pruebas 10.5555, doi.org no lo reconoce y el título no aparece en Google Scholar ni en Scopus.<br><b>Walters y Wilder (2022):</b> existe, pero con datos incorrectos. La IA indicó la revista <i>Nature</i> y el año 2022; en Google Scholar y en el DOI comprobé que se publicó en 2023 en <i>Scientific Reports</i>.</p>
+    <h3>4. Herramientas que usé</h3><ul><li>doi.org</li><li>Google Scholar</li><li>Scopus</li><li>ORCID</li></ul>
+    <h3>5. Criterios que apliqué a las fuentes que conservo</h3><ul><li>Autoridad</li><li>Actualidad</li><li>Precisión</li><li>Objetividad</li><li>Propósito</li></ul>
+    <h3>6. Conclusión</h3><p>Usaré las 3 fuentes que existen y cumplen los 5 criterios, y la de Walters y Wilder con sus datos corregidos. Recomiendo a otros estudiantes abrir siempre el DOI y buscar el título en Google Scholar antes de citar, y no confiar en que la IA confirme sus propias referencias.</p>
+    <h3>7. Referencias que consulté</h3>${[REFS.kapoun,REFS.wineburg].map(ref).join("")}`;
+  } else {
+    const e=[0,1,2].map(x=>DEMO_SRC.filter(s=>s.ex===x).length);
+    const rows=DEMO_SRC.map((s,n)=>`<tr><td>${n+1}</td><td>${s.r}${s.fix?`<br><i>${s.fix}</i>`:""}</td><td>${s.o}</td><td>${EX3[s.ex]}</td><td>${s.cr}</td><td>${DEC3[s.dec]}</td></tr>`).join("");
+    const keep=DEMO_SRC.map((s,n)=>s.dec===2?null:(DEMO_FIXED[n]||s.r)).filter(Boolean).sort((a,b)=>a.replace(/<[^>]+>/g,"").localeCompare(b.replace(/<[^>]+>/g,""),"es"));
+    title="Reporte de verificación de fuentes sugeridas por la IA";
+    body=`<p>Tema: ${tema} · Módulo 3. Aplicación práctica y proyecto final</p>
+    <h2>Introducción</h2><p>Este reporte presenta la verificación de 10 fuentes que ${tool} sugirió sobre el tema «${tema}». Prompt utilizado: «Dame 10 referencias académicas en formato APA 7 sobre ${tema}».</p>
+    <h2>Método</h2><p>Cada fuente se clasificó por su origen y se verificó con doi.org, ORCID, Google Scholar, Scopus y Web of Science. A las fuentes que existen se les aplicaron los 5 criterios de evaluación: autoridad, actualidad, precisión, objetividad y propósito.</p>
+    <h2>Resultados</h2><table><tr><th>#</th><th>Referencia sugerida por la IA</th><th>Origen</th><th>¿Existe?</th><th>Criterios que cumple</th><th>Decisión</th></tr>${rows}</table>
+    <h2>Análisis</h2><p>De las 10 fuentes, ${e[0]} existen y sus datos coinciden, ${e[1]} existen con datos incorrectos y ${e[2]} no existen. Es decir, 5 de cada 10 referencias tenían algún problema, lo que coincide con lo que reportan Walters y Wilder (2023).</p>
+    <h2>Conclusiones y recomendaciones</h2><p>La IA es útil para empezar a buscar, pero no para citar sin verificar. Conservo 7 fuentes (2 de ellas corregidas) y descarto 3. Recomiendo comprobar el DOI y el título de cada referencia y revisar sus datos contra el registro real.</p>
+    <h2>Declaración de uso de IA</h2><p>Usé ${tool} para obtener la lista inicial de 10 referencias. La verificación, el análisis y la redacción de este reporte son de mi autoría.</p>
+    <h2>Referencias</h2>${keep.map(ref).join("")}`;
+  }
+  return `<html><head><meta charset="utf-8"><title>${title}</title><style>body{font-family:Arial,sans-serif;font-size:12pt;line-height:1.5;color:#1f2a24;margin:24px}h1{font-size:16pt}h2{font-size:13pt;margin:16pt 0 4pt}h3{font-size:12pt;margin:14pt 0 4pt}table{border-collapse:collapse;width:100%;font-size:10pt}td,th{border:1px solid #999;padding:4pt;vertical-align:top}p.ref{padding-left:36pt;text-indent:-36pt}.demo{border:2px solid #8a5a2b;background:#fbf3e9;color:#5a3a1a;padding:8pt;font-weight:bold;font-size:10pt;margin-bottom:12pt}</style></head><body>${head}<h1>${title}</h1>${body}</body></html>`;
+}
+function demoDownload(m){
+  const up=evGet(PROD[m].s).upload||{}, html=demoDocHTML(m);
+  try{ const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob(["﻿"+html],{type:"application/msword"})); a.download=up.name||`M${m}_entrega.doc`; document.body.appendChild(a); a.click(); setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); },500); }
+  catch(e){ toast("No se pudo descargar el documento en este navegador."); }
+}
+function demoView(m){
+  const up=evGet(PROD[m].s).upload||{};
+  const d=document.createElement("div"); d.className="vmodal"; d.setAttribute("role","dialog"); d.setAttribute("aria-modal","true"); d.setAttribute("aria-label","Entrega de "+stuInfo(STUDENT).n);
+  d.innerHTML=`<div class="vmbox docbox"><div class="vh"><b>📄 ${esc(up.name||"Entrega")} · ${esc(stuInfo(STUDENT).n)}</b><span style="display:flex;gap:8px"><button class="btn ghost" data-ddl>⬇ Descargar Word</button><button class="btn ghost" data-vclose>Cerrar ✕</button></span></div>
+    <iframe class="docframe" title="Vista previa del documento entregado" sandbox=""></iframe></div>`;
+  document.body.appendChild(d);
+  d.querySelector("iframe").srcdoc=demoDocHTML(m);
+  const close=()=>{ d.remove(); document.removeEventListener("keydown",k); };
+  const k=e=>{ if(e.key==="Escape") close(); };
+  document.addEventListener("keydown",k);
+  d.addEventListener("click",e=>{ if(e.target===d) close(); });
+  d.querySelector("[data-ddl]").addEventListener("click",()=>demoDownload(m));
+  d.querySelector("[data-vclose]").addEventListener("click",close); d.querySelector("[data-vclose]").focus();
+}
 
 /* =========================================================
    v15 · CAMPOS OBLIGATORIOS Y «LO QUE TE FALTA»
